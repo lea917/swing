@@ -1,16 +1,12 @@
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
- 
-class MyFrame
-    extends JFrame
-    implements ActionListener {
- 
- 
-    private Container c;
+import javax.swing.DefaultListModel;
+
+public class form extends javax.swing.JFrame {
     private JLabel title;
     private JLabel name;
-    private JTextField tname;
+    private JTextField name;
     private JLabel mno;
     private JTextField tmno;
     private JLabel gender;
@@ -18,7 +14,7 @@ class MyFrame
     private JRadioButton female;
     private ButtonGroup gengp;
     private JLabel dob;
-    private JComboBox<String> date;
+private JComboBox<String> date;
     private JComboBox<String> month;
     private JComboBox<String> year;
     private JLabel add;
@@ -30,9 +26,9 @@ class MyFrame
     private JLabel res;
     private JTextArea resadd;
  
-    private String[] dates = { "1", "2", "3", ... }; // Add all days
-    private String[] months = { "Jan", "Feb", ... }; // Add all months
-    private String[] years = { "1995", "1996", ... }; // Add all years
+    private String[] dates = { "1", "2", "3", ... }; 
+    private String[] months = { "Jan", "Feb", ... }; 
+    private String[] years = { "1995", "1996", ... }; 
  
     public MyFrame() {
         setTitle("Registration Form");
@@ -48,10 +44,7 @@ class MyFrame
         title.setLocation(300, 30);
         c.add(title);
  
- 
- 
- 
-        sub = new JButton("Submit");
+         sub = new JButton("Submit");
         sub.setFont(new Font("Arial", Font.PLAIN, 20));
         sub.setSize(100, 30);
         sub.setLocation(400, 500);
@@ -61,13 +54,81 @@ class MyFrame
         setVisible(true);
     }
  
- 
-    public void actionPerformed(ActionEvent e) {
- 
+    public form() {
+        setTitle("Registration Form");
+        
+        initComponents();
     }
- 
-    public static void main(String[] args) {
-        new MyFrame();
+
+    DefaultModel lea=new DefaultModel();
+private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {                                         
+
+       
+         jTextField1.setText("");
+         jTextField2.setText("");
+         JOptionPane.showMessageDialog(rootPane,genderGroup.getSelection().getActionCommand());
+         JLabel5.setText(jComboBox1.get selectedItem());
+         JOptionPane.showMessageDialog("Date"+jComboBox1.getSelectedItem().to int());
+         JLabel5.setText(jComboBox2.get selectedItem());
+         JOptionPane.showMessageDialog("Month"+jComboBox2.getSelectedItem().to istring());
+         JLabel5.setText(jComboBox3.get selectedItem());
+         JOptionPane.showMessageDialog("Year"+jComboBox3.getSelectedItem().to int());
+         if(jCheckBox1.is selected())
+         {
+            JOptionPane.showMessageDialog(rootpane,jCheckBox1.getText());  
+         }
+          jList1.setModel(lea);
+         lea.addElement(jTextArea1.getText().trim());
+    }                                        
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {                                         
+        lea.resetElement(jList1.getSelecctedIIndex());
+        
+    }                                        
+public static void main(String args[]) {
+       
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new form().setVisible(true);
+            }
+        });
+    }
+
+    // Variables declaration - do not modify                     
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JCheckBox jCheckBox1;
+    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JComboBox<String> jComboBox2;
+    private javax.swing.JComboBox<String> jComboBox3;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JList<String> jList2;
+    private javax.swing.JRadioButton jRadioButton1;
+    private javax.swing.JRadioButton jRadioButton2;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
+    // End of variables declaration                   
+
+    private void Selected() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+private void selectedItem() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private void istring() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
- 
+
+
+
+
