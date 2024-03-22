@@ -1,0 +1,73 @@
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+ 
+class MyFrame
+    extends JFrame
+    implements ActionListener {
+ 
+ 
+    private Container c;
+    private JLabel title;
+    private JLabel name;
+    private JTextField tname;
+    private JLabel mno;
+    private JTextField tmno;
+    private JLabel gender;
+     private JRadioButton male;
+    private JRadioButton female;
+    private ButtonGroup gengp;
+    private JLabel dob;
+    private JComboBox<String> date;
+    private JComboBox<String> month;
+    private JComboBox<String> year;
+    private JLabel add;
+    private JTextArea tadd;
+    private JCheckBox term;
+    private JButton sub;
+    private JButton reset;
+    private JTextArea tout;
+    private JLabel res;
+    private JTextArea resadd;
+ 
+    private String[] dates = { "1", "2", "3", ... }; // Add all days
+    private String[] months = { "Jan", "Feb", ... }; // Add all months
+    private String[] years = { "1995", "1996", ... }; // Add all years
+ 
+    public MyFrame() {
+        setTitle("Registration Form");
+        setBounds(300, 90, 900, 600);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setResizable(false);
+ 
+        c = getContentPane();
+        c.setLayout(null);
+        title = new JLabel("Registration Form");
+        title.setFont(new Font("Arial", Font.PLAIN, 30));
+        title.setSize(300, 30);
+        title.setLocation(300, 30);
+        c.add(title);
+ 
+ 
+ 
+ 
+        sub = new JButton("Submit");
+        sub.setFont(new Font("Arial", Font.PLAIN, 20));
+        sub.setSize(100, 30);
+        sub.setLocation(400, 500);
+        sub.addActionListener(this);
+        c.add(sub);
+ 
+        setVisible(true);
+    }
+ 
+ 
+    public void actionPerformed(ActionEvent e) {
+ 
+    }
+ 
+    public static void main(String[] args) {
+        new MyFrame();
+    }
+}
+ 
